@@ -116,6 +116,9 @@ def on_message(ws, message):
         prev_close_price_sym = prev_close_prices[entry['s']]
         percent_diff = round(((entry['p'] - prev_close_price_sym) / prev_close_price_sym) * 100, 2)
         
+        # Edit 5 and 10 in if statements below to change percent change thresholds for sending a message to the user
+
+        # Sends message when price percentage change is > 5%
         if abs(percent_diff) > 5 and TICKER_FLAGS[f"{entry['s']}_5"] == False:
             message = client.messages.create(
                 messaging_service_sid=TWILIO_MESSAGING_SERVICE_SID,
@@ -125,6 +128,7 @@ def on_message(ws, message):
             )
             TICKER_FLAGS[f"{entry['s']}_5"] = True
             
+        # Sends message when price percentage change is > 10%
         if abs(percent_diff) > 10 and TICKER_FLAGS[f"{entry['s']}_10"] == False:
             message = client.messages.create(
                 messaging_service_sid=TWILIO_MESSAGING_SERVICE_SID,
