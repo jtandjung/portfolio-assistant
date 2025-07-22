@@ -2,7 +2,7 @@
 Developed a Python program to notify users of real-time price movements and latest news of selected stocks
 
 ## General Information
-Personal investing is a great way to save and passively grow your money but it is not without effort. To effectively invest, keeping track of your investments and of the broader stock market is an important task that can be both easy to forget and time-consuming. This program helps with that by sending the user a news overview and upcoming earnings dates for selected stocks every day at market open. It also monitors the selected stocks' prices in real-time and notifies the user when price changes cross pre-defined thresholds.
+Personal investing is a great way to save and passively grow your money but it is not without effort. To effectively invest, keeping track of your investments and of the broader stock market is an important task that can be both easy to forget and time-consuming. This program helps with that by sending the user a news overview and upcoming earnings dates for selected stocks every day at market open. It also monitors the selected stocks' prices in real time and notifies the user when price changes cross pre-defined thresholds.
 
 ## Technologies Used
 - Python
