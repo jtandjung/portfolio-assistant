@@ -151,7 +151,7 @@ def on_open(ws):
     for ticker in TICKERS:
         ws.send(f'{{"type":"subscribe","symbol":"{ticker}"}}')
 
-ws = websocket.WebSocketApp("wss://ws.finnhub.io?token=d1u8ct1r01qp7ee28s6gd1u8ct1r01qp7ee28s70",
+ws = websocket.WebSocketApp(f"wss://ws.finnhub.io?token={FH_API_KEY}",
                           on_message = on_message,
                           on_error = on_error,
                           on_close = on_close)
